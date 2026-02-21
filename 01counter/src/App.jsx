@@ -20,8 +20,10 @@ const App = () => {
     <>
       <h1>Counter App</h1>
       <h3>Count : {count}</h3>
-      <button onClick={addValue}>Increment</button><br /><br />
-      <button onClick={removeValue}> Decrement</button>
+      {/* <button onClick={addValue}>Increment</button><br /><br />
+      <button onClick={removeValue}> Decrement</button> */}
+      <button onClick={() => setCount(count + 1)}>Increment</button><br /><br />
+      <button onClick={() => setCount(count <= 0 ? count++ : count - 1)}> Decrement</button>
     </>
   )
 }
